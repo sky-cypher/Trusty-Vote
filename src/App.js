@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import Home from "./Components/Home";
 import PollingStation from "./Components/PollingStation";
 import NewPoll from "./Components/NewPoll";
+import Results from "./Components/Results";
 
 //import getConfig from "./config";
 //const { networkId } = getConfig(process.env.NODE_ENV || "development");
@@ -52,6 +53,7 @@ export default function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/PollingStation" element={<PollingStation />} />
                         <Route path="/NewPoll" element={<NewPoll />} />
+                        <Route path="/Results" element={<Results />} />
                     </Routes>
             }
         </Router>

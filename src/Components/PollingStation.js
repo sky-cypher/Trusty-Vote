@@ -89,6 +89,8 @@ const PollingStation = () => {
                     {didVote
                         ? <Button variant="primary"
                             className="btn-success"
+                            type='submit'
+                            href='/Results'
                             style={{ margin: '.5em' }} >
                             View Results
                         </Button>
