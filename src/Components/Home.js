@@ -43,7 +43,7 @@ const Home = () => {
 
                 </tbody>
             </Table>
-        </Container>
+        </Container >
     );
 };
 

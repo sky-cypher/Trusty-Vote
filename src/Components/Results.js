@@ -37,14 +37,11 @@ const Results = () => {
             width={160}
             height={60}
             options={{
-                title: {
-                    display: true,
-                    text: "Poll Results",
-                    fontSize: 20
-                },
+                indexAxis: 'y',
+                responsive: true,
                 legend: {
                     display: true,
-                    position: "top"
+                    position: "right"
                 }
             }}
             data={chartData}

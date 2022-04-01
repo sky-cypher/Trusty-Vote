@@ -8,7 +8,7 @@ const PollingStation = () => {
     // const title = 'Who is Better?';
     const prompt = localStorage.getItem('prompt')
     const [didVote, changeDidVote] = useState(false)
-    const [selected, changeSelected] = useState(-1)
+    const [selected, changeSelected] = useState(0)
 
     useEffect(() => {
         const getInfo = async () => {
@@ -30,10 +30,10 @@ const PollingStation = () => {
 
     const addVote = async () => {
         console.log(selected)
-        if (selected >= 0) {
+        if (!didVote) {
             await window.contract.addVote({
                 prompt: prompt,
-                index: selected
+                index: Number(selected)
             }).catch((e) => console.log("addVote " + selected + e));
 
             await window.contract.recordUser({
@@ -73,6 +73,7 @@ const PollingStation = () => {
                                         key={index}
                                         type='radio'
                                         label={option}
+                                        defaultChecked={index === 0}
                                         value={index}
                                         name='optradio'
                                         onChange={handleInputChange}

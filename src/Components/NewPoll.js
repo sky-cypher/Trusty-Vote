@@ -13,6 +13,7 @@ const NewPoll = () => {
             prompt: prompt,
             options: inputList
         })
+        window.location.replace(window.location.href + "/../")
     }
 
     const handleinputchange = (e, index) => {
