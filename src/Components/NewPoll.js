@@ -62,6 +62,7 @@ const NewPoll = () => {
                                             md={{ span: 1, offset: 1 }}
                                             sm={{ span: 1, offset: 1 }} >
                                             <Button
+                                                disabled={index < 2}
                                                 className='btn-danger'
                                                 onClick={() => handleremove(index)}>
                                                 Remove

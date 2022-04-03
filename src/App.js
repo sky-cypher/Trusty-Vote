@@ -34,7 +34,7 @@ export default function App() {
                 </Container>
             </Navbar>
             {
-                window.accountId === ""
+                !window.walletConnection.isSignedIn()
                     ? <Alert variant="info">
                         <Alert.Heading>Login First</Alert.Heading>
                         <p>
