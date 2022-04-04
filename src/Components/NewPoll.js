@@ -13,7 +13,8 @@ const NewPoll = () => {
             prompt: prompt,
             options: inputList
         })
-        window.location.replace(window.location.href + "/../")
+        localStorage.setItem('prompt', prompt)
+        window.location.replace(window.location.href + "/../PollingStation")
     }
 
     const handleinputchange = (e, index) => {
